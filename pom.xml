@@ -68,12 +68,12 @@
 		<additionalparam>-Xdoclint:none</additionalparam>
 
         <!-- dependencies -->
-        <jackson.version>2.16.1</jackson.version>
         <guava.version>33.0.0-jre</guava.version>
         <slf4j.version>2.0.11</slf4j.version>
         <lombok.version>1.18.30</lombok.version>
         <swagger-parser.version>2.1.20</swagger-parser.version>
         <jetbrains-annotations.version>24.1.0</jetbrains-annotations.version>
+        <http-routes-index.version>1.0.0-SNAPSHOT</http-routes-index.version>
         <!-- Unit testing -->
         <junit.version>4.13.2</junit.version>
         <assertj.version>3.25.2</assertj.version>
@@ -195,4 +195,54 @@
             </plugin>
 		</plugins>
 	</build>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>${guava.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations</artifactId>
+            <version>${jetbrains-annotations.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.swagger.parser.v3</groupId>
+            <artifactId>swagger-parser</artifactId>
+            <version>${swagger-parser.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.coreoz</groupId>
+            <artifactId>http-routes-index</artifactId>
+            <version>${http-routes-index.version}</version>
+        </dependency>
+
+        <!-- unit testing -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>${assertj.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>${logback.version}</version>
+        </dependency>
+    </dependencies>
 </project>
